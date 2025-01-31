@@ -4,27 +4,27 @@ public class User {
     private String userName;
     private float userWeight;
     private EGender userGender;
-    private Goal userGoal;
-    private Reminder userReminder;
-    private TrainingPlan userTrainingPlan;
-    private WorkoutSession userWorkoutSession;
-    private MetricsTracker userMetrics;
+    private Goal[] userGoal;
+    private Reminder[] userReminder;
+    private TrainingPlan[] userTrainingPlan;
+    private WorkoutSession[] userWorkoutSession;
+    private MetricsTracker[] userMetrics;
 
-    public User(Integer userId, Integer userAge, String userName, float userWeight, EGender userGender, Goal userGoal, Reminder userReminder, TrainingPlan userTrainingPlan, WorkoutSession userWorkoutSession, MetricsTracker userMetrics) {
+    public User(Integer userId, Integer userAge, String userName, float userWeight, EGender userGender) {
         this.userId = userId;
         this.userAge = userAge;
         this.userName = userName;
         this.userWeight = userWeight;
         this.userGender = userGender;
-        this.userGoal = userGoal;
-        this.userReminder = userReminder;
-        this.userTrainingPlan = userTrainingPlan;
-        this.userWorkoutSession = userWorkoutSession;
-        this.userMetrics = userMetrics;
+
     }
 
     public Integer getUserId() {
         return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public Integer getUserAge() {
@@ -59,43 +59,14 @@ public class User {
         this.userGender = userGender;
     }
 
-    public Goal getUserGoal() {
-        return userGoal;
-    }
-
-    public void setUserGoal(Goal userGoal) {
-        this.userGoal = userGoal;
-    }
-
-    public Reminder getUserReminder() {
-        return userReminder;
-    }
-
-    public void setUserReminder(Reminder userReminder) {
-        this.userReminder = userReminder;
-    }
-
-    public TrainingPlan getUserTrainingPlan() {
-        return userTrainingPlan;
-    }
-
-    public void setUserTrainingPlan(TrainingPlan userTrainingPlan) {
-        this.userTrainingPlan = userTrainingPlan;
-    }
-
-    public WorkoutSession getUserWorkoutSession() {
-        return userWorkoutSession;
-    }
-
-    public void setUserWorkoutSession(WorkoutSession userWorkoutSession) {
-        this.userWorkoutSession = userWorkoutSession;
-    }
-
-    public MetricsTracker getUserMetrics() {
-        return userMetrics;
-    }
-
-    public void setUserMetrics(MetricsTracker userMetrics) {
-        this.userMetrics = userMetrics;
+    @Override
+    public String toString() {
+        return "User{\n" +
+                "userId=" + userId +
+                ", \nuserAge=" + userAge +
+                ", \nuserName='" + userName + '\'' +
+                ", \nuserWeight=" + userWeight +
+                ", \nuserGender=" + userGender + "\n" +
+                '}';
     }
 }

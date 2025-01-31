@@ -12,4 +12,16 @@ public enum EGender {
         return description;
     }
 
+    public static EGender fromString(String input) {
+        if (input == null) {
+            throw new IllegalArgumentException("Gender cannot be null");
+        }
+        for (EGender gender : EGender.values()) {
+            if (gender.name().equalsIgnoreCase(input) || gender.description.equalsIgnoreCase(input)) {
+                return gender;
+            }
+        }
+        throw new IllegalArgumentException("Invalid gender: " + input);
+    }
+
 }
