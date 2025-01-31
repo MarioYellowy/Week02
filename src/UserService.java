@@ -25,5 +25,33 @@ public class UserService {
         return newUser;
     }
 
+    public void editUser() {
+        System.out.println("Por favor ingresa el id del usuario que quieres editar:");
+        Integer inputId = sc.nextInt();
+        for (User user : users) {
+            Integer userId = user.getUserId();
+            String userName;
+            Integer userAge;
+            float userWeight;
+            EGender userGender;
+            if (userId == inputId) {
+                System.out.println("Se actualizaran todos los datos");
+                System.out.println("Por favor ingresa el nombre:");
+                userName = sc.next();
+                user.setUserName(userName);
+                System.out.println("Por favor ingresa la edad:");
+                userAge = sc.nextInt();
+                user.setUserAge(userAge);
+                System.out.println("Por favor ingresa el peso:");
+                userWeight = sc.nextFloat();
+                user.setUserWeight(userWeight);
+                System.out.println("Por favor ingresa el genero:");
+                userGender = EGender.fromString(sc.next());
+                user.setUserGender(userGender);
+            } else {
+                System.out.println("EL usuario con id: " + inputId + " no existe");
+            }
+        }
+    }
 
 }
