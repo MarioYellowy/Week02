@@ -1,4 +1,6 @@
-public class GoalCalories extends Goal{
+package Models;
+
+public class GoalCalories extends Goal {
     private String goalDescription;
     private float goalCaloriesToBurn, goalCaloriesBurned;
 

@@ -1,14 +1,16 @@
+package Models;
+
+import Enums.ETrainingPlanType;
+
 public class TrainingPlan {
     private Integer trainingPlanId;
     private String trainingPlanName;
     private ETrainingPlanType trainingPlanType;
-    private PhysicalActivity physicalActivity;
 
-    public TrainingPlan(Integer trainingPlanId, String trainingPlanName, ETrainingPlanType trainingPlanType, PhysicalActivity physicalActivity) {
+    public TrainingPlan(Integer trainingPlanId, String trainingPlanName, ETrainingPlanType trainingPlanType) {
         this.trainingPlanId = trainingPlanId;
         this.trainingPlanName = trainingPlanName;
         this.trainingPlanType = trainingPlanType;
-        this.physicalActivity = physicalActivity;
     }
 
     public Integer getTrainingPlanId() {

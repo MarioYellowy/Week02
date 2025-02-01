@@ -1,3 +1,7 @@
+package Models;
+
+import Enums.EWorkoutIntensity;
+
 public class PhysicalActivity {
     private Integer physicalActivityId;
     private String physicalActivityName;

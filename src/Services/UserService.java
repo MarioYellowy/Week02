@@ -1,10 +1,16 @@
+package Services;
+
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
+
+import Models.User;
+import Enums.EGender;
 
 public class UserService {
     ArrayList<User> users = new ArrayList<>();
 
-    UserService() {}
+    public UserService() {}
 
     Scanner sc = new Scanner(System.in);
 
@@ -30,7 +36,7 @@ public class UserService {
         Integer inputId = sc.nextInt();
         for (User user : users) {
             Integer userId = user.getUserId();
-            String userName;
+            String userName ;
             Integer userAge;
             float userWeight;
             EGender userGender;
@@ -54,4 +60,24 @@ public class UserService {
         }
     }
 
+    public void deleteUser() {
+        System.out.println("Por favor ingresa el ID del usuario que se eliminará: ");
+        Integer inputId = sc.nextInt();
+        Iterator<User> iterator = users.iterator();
+        while (iterator.hasNext()) {
+            User user = iterator.next();
+            if (user.getUserId().equals(inputId)) {
+                iterator.remove();
+                System.out.println("Usuario eliminado correctamente.");
+                return;
+            }
+        }
+        System.out.println("Usuario no encontrado.");
+    }
+
+    public void getUsers() {
+        for (User user : users) {
+            System.out.println(user.toString());
+        }
+    }
 }

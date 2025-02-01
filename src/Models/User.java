@@ -1,3 +1,7 @@
+package Models;
+
+import Enums.EGender;
+
 public class User {
 
     private Integer userId, userAge;

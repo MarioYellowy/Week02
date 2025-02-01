@@ -1,3 +1,5 @@
+package Enums;
+
 public enum EGender {
     H("Hombre"), // Hombre
     M("Mujer"); // Mujer

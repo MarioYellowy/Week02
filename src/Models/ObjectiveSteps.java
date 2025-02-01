@@ -1,18 +1,15 @@
+package Models;
+
 public class ObjectiveSteps {
-    private Integer objectiveId, goalId;
+    private Integer  goalId;
     private String objectiveDescription;
     private String[] objectiveStepsToTake, objectiveStepsTaken;
 
-    public ObjectiveSteps(Integer objectiveId, String objectiveDescription, String[] objectiveStepsToTake, String[] objectiveStepsTaken, Integer goalId) {
-         this.objectiveId = objectiveId;
+    public ObjectiveSteps(String objectiveDescription, String[] objectiveStepsToTake, String[] objectiveStepsTaken, Integer goalId) {
          this.objectiveDescription = objectiveDescription;
          this.objectiveStepsToTake = objectiveStepsToTake;
          this.objectiveStepsTaken = objectiveStepsTaken;
          this.goalId = goalId;
-    }
-
-    public Integer getObjectiveId() {
-        return objectiveId;
     }
 
     public String getObjectiveDescription() {

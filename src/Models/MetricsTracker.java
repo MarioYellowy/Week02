@@ -1,3 +1,7 @@
+package Models;
+
+import Enums.EMeasurementUnit;
+
 public class MetricsTracker implements ITrackable {
     private Integer metrickTrackerId;
     private EMeasurementUnit measurementUnit;

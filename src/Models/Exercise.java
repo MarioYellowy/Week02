@@ -1,3 +1,5 @@
+package Models;
+
 public class Exercise {
     private Integer exerciseId;
     private String exerciseName, exerciseDescription;
