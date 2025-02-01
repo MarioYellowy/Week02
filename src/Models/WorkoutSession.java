@@ -1,15 +1,12 @@
 package Models;
 
-import java.time.LocalDateTime;
-import java.util.List;
-
 public class WorkoutSession implements ITrackable {
     private Integer workoutSessionId;
-    private LocalDateTime workoutSessionDate;
+    private float workoutSessionTime;
 
-    public WorkoutSession(Integer workoutSessionId, LocalDateTime workoutSessionDate) {
+    public WorkoutSession(Integer workoutSessionId, float workoutSessionTime) {
         this.workoutSessionId = workoutSessionId;
-        this.workoutSessionDate = workoutSessionDate;
+        this.workoutSessionTime = workoutSessionTime;
 
     }
 
@@ -17,12 +14,12 @@ public class WorkoutSession implements ITrackable {
         return workoutSessionId;
     }
 
-    public LocalDateTime getWorkoutSessionDate() {
-        return workoutSessionDate;
+    public float getWorkoutSessionTime() {
+        return workoutSessionTime;
     }
 
-    public void setWorkoutSessionDate(LocalDateTime workoutSessionDate) {
-        this.workoutSessionDate = workoutSessionDate;
+    public void setWorkoutSessionTime(float workoutSessionTime) {
+        this.workoutSessionTime = workoutSessionTime;
     }
 
 }

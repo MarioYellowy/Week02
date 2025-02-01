@@ -33,11 +33,5 @@ public class TrainingPlan {
         this.trainingPlanType = trainingPlanType;
     }
 
-    public PhysicalActivity getPhysicalActivity() {
-        return physicalActivity;
-    }
 
-    public void setPhysicalActivity(PhysicalActivity physicalActivity) {
-        this.physicalActivity = physicalActivity;
-    }
 }

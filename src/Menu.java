@@ -81,8 +81,10 @@ public class Menu {
                     workoutSessionService.createWorkoutSession();
                     break;
                 case 19:
+                    workoutSessionService.editWorkoutSession();
                     break;
                 case 20:
+                    workoutSessionService.deleteWorkoutSession();
                     break;
                 case 21:
                     userService.getUsers();
